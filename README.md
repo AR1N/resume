@@ -1,1 +1,1 @@
-##click here()to view my resume
+click here(https://ar1n.github.io/resume)to view my resume
