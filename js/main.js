@@ -17,7 +17,7 @@ window.onload = function () {
     }
 
     //背景切换
-    var bgs = ["bg1_1.png", "bg1_2.png", "bg1_3.png", "bg1_4.png", "bg1_5.png", "bg1_6.png"];
+    var bgs = ["bg1_1.jpg", "bg1_2.jpg", "bg1_3.jpg", "bg1_4.jpg", "bg1_5.jpg", "bg1_6.jpg"];
     setInterval(function () {
         var i = Math.floor(Math.random() * (6 - 1) + 1); //生成1~4的随机数
         document.getElementById("p1bg").src = "imges/" + bgs[i];

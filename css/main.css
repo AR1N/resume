@@ -23,10 +23,18 @@ a {
     top: 50px;
     right: 0;
     z-index: 998;
+    -ms-zoom-animation: me 5s linear infinite;
     -webkit-animation: me 5s linear infinite;
     animation: me 5s linear infinite;
 }
-
+@-ms-keyframes me{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 @-webkit-keyframes me {
     from { transform: rotate(0deg);  }
      to { transform: rotate(360deg);  }
@@ -199,7 +207,7 @@ a {
 }
 
 .p2_bg {
-    background-image: url("../imges/bg2.png");
+    background-image: url("../imges/bg2.jpg");
 }
 
 .p3_bg {
