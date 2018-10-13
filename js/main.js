@@ -1,11 +1,10 @@
 window.onload = function () {
-
+// 加载层
         var mask=document.getElementById("loading");
     mask.parentNode.removeChild(mask);
 
-    //禁用鼠标右键
     document.oncontextmenu = function (e) {
-        return false;
+        return false; //禁用鼠标右键
     }
 
         //音乐控制按钮
@@ -20,11 +19,14 @@ window.onload = function () {
             me.style.animation = "none";
         }
     }
+    //移动端
     
+
+
     //背景切换
-    var bgs = ["bg1_1.jpg", "bg1_2.jpg", "bg1_3.jpg", "bg1_4.jpg", "bg1_5.jpg", "bg1_6.jpg"];
+    var bgs = ["bg1_1.jpg", "bg1_2.jpg", "bg1_3.jpg", "bg1_4.jpg", "bg1_5.jpg"];
     setInterval(function () {
-        var i = Math.floor(Math.random() * (6 - 1) + 1); //生成1~6的随机数
+        var i = Math.floor(Math.random() * (5 - 1) + 1); //生成1~5的随机数
         document.getElementById("p1bg").src = "imges/" + bgs[i];
     }, 5000);
 
@@ -53,7 +55,6 @@ window.onload = function () {
         }
     }, 150);
 
-
 }
 //*********文档加载完成**************** */
 // document.onreadystatechange = completeLoading;
@@ -64,9 +65,34 @@ window.onload = function () {
 //         loadingmask.parentNode.removeChild(loadingmask);
 //     }
 // }
-//-------------
+//--------------------------------------------------------------------------
 
 $(function () {
+var mybody = document.getElementsByTagName('body')[0];
+var startX, startY, moveEndX, moveEndY, X, Y;
+mybody.addEventListener('touchstart', function (e) {
+    // e.preventDefault();
+    startX = e.touches[0].pageX;
+    startY = e.touches[0].pageY;
+}, false);
+mybody.addEventListener('touchmove', function (e) {
+    // e.preventDefault();
+    moveEndX = e.changedTouches[0].pageX;
+    moveEndY = e.changedTouches[0].pageY;
+    X = moveEndX - startX;
+    Y = moveEndY - startY;
+    var currentSection = $(".fp-section.active");
+
+ if (Math.abs(Y) > Math.abs(X) && Y < 0) { // up
+    $("body").next(".fp-section .active").addClass("active").siblings().removeClass("active");
+    
+ }
+    if (Math.abs(Y) > Math.abs(X) && Y > 0) { // down
+      
+    }
+   
+
+});
   
     setTimeout(function () {
         $("audio").attr("src", "music/The most beautiful expectation.mp3")
@@ -84,7 +110,6 @@ $(function () {
     }, function () {
         $(this).siblings().stop().fadeOut();
     });
-
 
     // fullpage设置
     $('#fullpage').fullpage({

@@ -824,6 +824,8 @@
 
 				nav.find('li').eq($('.fp-section.active').index('.fp-section')).find('a').addClass('active');
 
+
+
 			}
 
 
@@ -916,10 +918,6 @@
 
 			}
 
-
-
-
-
 			$(window).on('load', function() {
 
 				scrollToAnchor();
@@ -929,8 +927,6 @@
 
 
 		});
-
-
 
 
 
@@ -1136,6 +1132,7 @@
 
 					clearTimeout(scrollId);
 
+
 					scrollId = setTimeout(function(){
 
 						isScrolling = false;
@@ -1209,7 +1206,7 @@
 		*/
 
 		function scrolling(type, scrollable){
-
+			
 			if(type == 'down'){
 
 				var check = 'bottom';

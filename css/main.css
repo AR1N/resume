@@ -13,7 +13,89 @@ body {
 a {
     text-decoration: none;
 }
+/* 字体图标 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.eot') format('embedded-opentype'),
+        url('iconfont.woff') format('woff'),
+        url('iconfont.ttf') format('truetype'),
+        url('iconfont.svg#iconfont') format('svg');
+}
 
+.iconfont {
+    font: 16px/45px "Microsoft Yahei";
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*  媒体查询 */
+/* 小于768px */
+@media screen and (max-width: 768px) {
+    .music img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .menu ul i {
+        display: none;
+    }
+
+    .p1 h1 {
+        font-size: 32px !important;
+    }
+
+    .p1 h3 {
+        font-size: 18px !important;
+    }
+
+    .p3 .skill {
+        height: 100%;
+        width: 28%;
+        margin: 12px 20px;
+    }
+
+    .p3 .skill div {
+        padding: 10px;
+    }
+
+    .p3 .skill p {
+        margin: 20% 0;
+    }
+
+    .skills .skill ul li {
+        line-height: 1.2em;
+    }
+}
+
+/* 大于768px */
+@media screen and (min-width: 768px) {
+    .smbtn i {
+        display: none;
+    }
+
+    .p2 p {
+        line-height: 2.5rem !important;
+    }
+
+    .menu_l,
+    .menu ul {
+        display: block !important;
+    }
+
+    .menu li {
+        margin-right: 2%;
+    }
+}
+
+/* 音乐图标 */
 .music img {
     border-radius: 50%;
     font: bold 24px/100px "Microsoft Yahei";
@@ -23,23 +105,23 @@ a {
     top: 50px;
     right: 0;
     z-index: 998;
-    -ms-zoom-animation: me 5s linear infinite;
+    -moz-animation: me 5s linear infinite;
     -webkit-animation: me 5s  linear infinite;
+    -o-animation:me 5s linear infinite;
     animation: me 5s linear infinite;
 }
-@-ms-keyframes me{
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
+@-moz-keyframes me{
+    from {transform: rotate(0deg); }
+    to {transform: rotate(360deg); }
+ }
 @-webkit-keyframes me {
     from { transform: rotate(0deg);  }
      to { transform: rotate(360deg);  }
 }
-
+@-o-keyframes me {
+    from { transform: rotate(0deg);}
+  to { transform: rotate(360deg); }
+}
 @keyframes me {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
@@ -47,9 +129,69 @@ a {
 
 .music img:hover {
     opacity: 0.7;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
     animation: none!important;
 }
 
+/* 页面公共样式 */
+.p1,.p2,.p3,.p4 {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.p1_bg,.p2_bg,.p3_bg,.p4_bg {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+}
+
+.p2_bg {
+    background-image: url("../imges/bg2.jpg");
+}
+
+.p3_bg {
+    background-image: url("../imges/bg3.jpg");
+}
+
+.p4_bg {
+    background-image: url("../imges/bg4.jpg");
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -66;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.p2 h3,.p3 h3,.p4 h3 {
+    width: 150px;
+    font-size: 36px;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border-bottom: 2px solid rgb(232, 126, 4);
+}
+/* 菜单 */
 .menu {
     height: 45px;
     width: 100%;
@@ -106,25 +248,6 @@ a {
     float: right;
 }
 
-@font-face {
-    font-family: 'iconfont';
-    src: url('iconfont.eot');
-    src: url('iconfont.eot?#iefix') format('embedded-opentype'),
-        url('iconfont.woff') format('woff'),
-        url('iconfont.ttf') format('truetype'),
-        url('iconfont.svg#iconfont') format('svg');
-}
-
-.iconfont {
-    font: 16px/45px "Microsoft Yahei";
-    font-family: "iconfont" !important;
-    font-size: 16px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .menu li i {
     line-height: 45px;
     margin-right: 0.8rem;
@@ -136,122 +259,14 @@ a {
     margin-right: 0.5rem;
 }
 
-/*  媒体查询 */
-/* 小于768px */
-@media screen and (max-width: 768px) {
-    .music img {
-        width: 50px;
-        height: 50px;
-    }
 
-    .menu ul {
-        display: none;
-    }
-
-    .menu ul i {
-        display: none;
-    }
-
-    .p1 h1 {
-        font-size: 32px !important;
-    }
-
-    .p1 h3 {
-        font-size: 18px !important;
-    }
-   .p3 .skill {
-       height: 100%;
-       width: 28%;
-       margin: 12px 20px;
-   }
-    .p3 .skill div{padding: 10px;}
-   .p3 .skill p {margin: 20% 0 ;}
-  .skills .skill ul li { line-height: 1.5em;}
-}
-/* 大于768px */
-@media screen and (min-width: 768px) {
-    .smbtn i {
-        display: none;
-    }
-
-    .p2 p {
-        line-height: 2.5rem !important;
-    }
-
-    .menu_l,
-    .menu ul {
-        display: block !important;
-    }
-
-    .menu li {
-        margin-right: 2%;
-    }
-}
-
-/* 页面公共样式 */
-.p1,
-.p2,
-.p3,
-.p4 {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-
-.p1_bg,
-.p2_bg,
-.p3_bg,
-.p4_bg {
-    width: 100%;
-    height: 100%;
-    background: no-repeat center;
-    background-size: cover;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -99;
-}
-
-.p2_bg {
-    background-image: url("../imges/bg2.jpg");
-}
-
-.p3_bg {
-    background-image: url("../imges/bg3.jpg");
-}
-
-.p4_bg {
-    background-image: url("../imges/bg4.jpg");
-}
-
-.mask {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -66;
-    background-color: rgba(0, 0, 0, 0.25);
-}
-.p2 h3,
-.p3 h3,
-.p4 h3 {
-    width: 150px;
-    font-size: 36px;
-    position: absolute;
-    top: 8%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    border-bottom: 2px solid rgb(232, 126, 4);
-}
 /* 第一页 */
 .p1 .p1_bg img {
     width: 100%;
     height: 100%;
     -webkit-animation: bgbs 5s infinite;
+    -moz-animation: bgbs 5s infinite;
+    -o-animation: bgbs 5s infinite;
     animation: bgbs 5s infinite;
 }
 
@@ -260,7 +275,16 @@ a {
  50% {transform: scale(1.1); }
 100% {transform: scale(1); }
 }
-
+@-moz-keyframes bgbs {
+    0% {transform: scale(1); }
+    50% {transform: scale(1.1);}
+100% {  transform: scale(1); }
+}
+@-o-keyframes bgbs {
+    0% {transform: scale(1); }
+50% {transform: scale(1.1); }
+ 100% { transform: scale(1); }
+}
 @keyframes bgbs {
     0% {transform: scale(1);}
     50% { transform: scale(1.1);}
@@ -277,6 +301,7 @@ a {
 
 .p1 .logo:hover {
     opacity: 0.8;
+    filter:Alpha(opacity=80)
 }
 
 .p1 h1 {
@@ -300,12 +325,13 @@ a {
     overflow: hidden;
     position: absolute;
     bottom: 18px;
-    display: table-cell;
     background-size: 100%;
     left: 50%;
     margin-left: -25px;
     z-index: 99;
     -webkit-animation: .6s shake linear infinite alternate;
+    -moz-animation: .6s shake linear infinite alternate;
+    -o-animation: .6s shake linear infinite alternate;
     animation: .6s shake linear infinite alternate;
 }
 
@@ -313,7 +339,14 @@ a {
     from {bottom: 20px;  }
  to {bottom: 40px; }
 }
-
+@-moz-keyframes shake {
+    from {bottom: 20px; }
+to {bottom: 40px; }
+}
+@-o-keyframes shake {
+    from {bottom: 20px; }
+to {bottom: 40px; }
+}
 @keyframes shake {
     from {bottom: 20px; }
  to { bottom: 40px;}
@@ -375,28 +408,34 @@ a {
 }
 .skill div{
      width: 95%;
-     height: 90%;   
+     height: 100%;   
      padding: 20px;
      border-radius: 8px;
-     background-color: rgba(0, 0, 0, .5);
+     background-color: rgba(0, 0, 0, .6);
       box-shadow: 2px 2px 10px rgb(232, 126, 4);
      backface-visibility: hidden;
        transition: 1s all;
        position: absolute;
 }
  .skill:hover .skill_z{
+     -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+     -o-transform: rotateY(180deg);
      transform: rotateY(180deg);
  }
  .skill_f {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
      transform: rotateY(180deg);
  }
  .skill:hover .skill_f{
+     -webkit-transform: rotateY(0deg);
+     -moz-transform: rotateY(0deg);
+     -o-transform: rotateY(0deg);
      transform: rotateY(0deg);
  }
- .skill1{
-     position: relative;
- }
-
+ 
  .skill img{
      width: 60px;
      height: 60px;
@@ -406,13 +445,11 @@ a {
       margin-top: 50%;
   }
   .skill ul{
-       
-       list-style: none;
        margin: 0;
-padding: 0;
-
+    padding: 0;
   }
   .skill ul li {
+      margin-left: 10px;
       word-wrap: break-word;
       list-style-type: circle;  
       line-height: 2em;
@@ -430,30 +467,16 @@ padding: 0;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-
-
 .p4 em {
     font-size: 24px;
     font-style: normal;
     padding: 10px 12px;
    
 }
-
-.p4e1 {
-    color: #e3723c;
-}
-
-.p4e2 {
-    color: rgb(247, 252, 0);
-}
-
-.p4e3 {
-    color: rgb(235, 235, 235);
-}
-
-.p4e4 {
-    color: #0f0;
-}
+.p4e1 { color: #e3723c;}
+.p4e2 {color: rgb(247, 252, 0);}
+.p4e3 {color: rgb(235, 235, 235);}
+.p4e4 {color: #0f0;}
 
 .r_motto {
     margin-top: 35px;
@@ -476,13 +499,9 @@ padding: 0;
     margin: 0 10px;
 }
 
-.contact a {
-    color: #fff;
-}
+.contact a {color: #fff;}
 
-.contact i {
-    font-size: 36px;
-}
+.contact i { font-size: 36px;}
 
 .contact span {
     display: none;
@@ -491,8 +510,6 @@ padding: 0;
     background: #337ab7;
     left: -26px;
     top: -36px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
     border-radius: 6px;
     text-align: center;
     color: #fff;
@@ -529,10 +546,8 @@ padding: 0;
     left: -54px;
 }
 
-.contact .r_weixin {
-    background: url("../imges/r_weixin.jpg") no-repeat;
-}
+.contact .r_weixin {background: url("../imges/r_weixin.jpg") no-repeat;}
 
-.contact .r_qq {
-    background: url("../imges/r_qq.jpg") no-repeat;
-}
+.contact .r_qq {background: url("../imges/r_qq.jpg") no-repeat;}
+
+/* over */
