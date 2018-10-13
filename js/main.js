@@ -1,13 +1,13 @@
 window.onload = function () {
-// 加载层
-        var mask=document.getElementById("loading");
+    // 加载层
+    var mask = document.getElementById("loading");
     mask.parentNode.removeChild(mask);
 
     document.oncontextmenu = function (e) {
         return false; //禁用鼠标右键
     }
 
-        //音乐控制按钮
+    //音乐控制按钮
     var me = document.getElementById('me');
     var myaudio = document.getElementById('myaudio');
     me.onclick = function () {
@@ -20,7 +20,7 @@ window.onload = function () {
         }
     }
     //移动端
-    
+
 
 
     //背景切换
@@ -41,7 +41,7 @@ window.onload = function () {
             clearInterval(timer1);
         }
     }, 188);
-  
+
 
     //文字效果2     
     var introduce = document.getElementById('introduce');
@@ -71,7 +71,7 @@ $(function () {
 
     setTimeout(function () {
         $("audio").attr("src", "music/The most beautiful expectation.mp3")
-    }, 4000); 
+    }, 4000);
 
     //菜单按钮
     $(".smbtn i").click(function () {
@@ -88,29 +88,33 @@ $(function () {
 
     // fullpage设置
     $('#fullpage').fullpage({
-        sectionsColor: ['transpartent', 'transpartent', 'transpartent', 'transpartent'], 
-        controlArrow: true, 
-        verticalCentered: true, 
-        css3: true, 
-        resize: false, 
-        scrolllingSpeed: 500, 
-        anchors: ['page1', 'page2', 'page3', 'page4'], 
+        sectionsColor: ['transpartent', 'transpartent', 'transpartent', 'transpartent'],
+        controlArrow: true,
+        verticalCentered: true,
+        css3: true,
+        resize: false,
+        scrolllingSpeed: 500,
+        anchors: ['page1', 'page2', 'page3', 'page4'],
         lockAnchors: false,
-        loopBottom: false, 
-        loopTop: false, 
-        loopHorizontal: false, 
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: false,
         autoScrolling: true,
         scrollBar: false,
-        fixedElements: ".music", 
+        fixedElements: ".music",
         menu: ".menu",
-        keyboardScrolling: true, 
-        keyboardScrolling: true, 
-        navigation: true, 
-        navigationTooltips: ["首页", "关于我", "技能", "联系我"], 
-        navigationColor: '#fff', 
+        keyboardScrolling: true,
+        keyboardScrolling: true,
+        navigation: true,
+        navigationTooltips: ["首页", "关于我", "技能", "联系我"],
+        navigationColor: '#fff',
         slidesNavigation: true,
-       
+
     });
-  
-    
+    $(".right a").hover(function () {
+        $(this).siblings().fadeIn();
+    }, function () {
+        $(this).siblings().fadeOut();
+    });
+
 });
