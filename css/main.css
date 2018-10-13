@@ -174,7 +174,7 @@ a {
     top: 0;
     left: 0;
     z-index: -66;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .p2 h3,.p3 h3,.p4 h3 {
@@ -307,7 +307,7 @@ a {
 .p1 h1 {
     color: rgb(255, 32, 32);
     font-size: 42px;
-
+text-shadow:2px 2px 8px #fff;
 }
 
 .p1 h3 {

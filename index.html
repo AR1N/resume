@@ -37,9 +37,8 @@ opacity: 0.6;
 position: absolute;
 top: 0;
 left: 0;
-
--webkit-animation: bounce 2.0s infinite ease-in-out;
-animation: bounce 2.0s infinite ease-in-out;
+-webkit-animation: loading 2.0s infinite ease-in-out;
+animation: loading 2.0s infinite ease-in-out;
 }
 
 .double-bounce2 {
@@ -47,12 +46,12 @@ animation: bounce 2.0s infinite ease-in-out;
 animation-delay: -1.0s;
 }
 
-@-webkit-keyframes bounce {
+@-webkit-keyframes loading {
 0%, 100% { -webkit-transform: scale(0.0) }
 50% { -webkit-transform: scale(1.0) }
 }
 
-@keyframes bounce {
+@keyframes loading {
 0%, 100% {
 transform: scale(0.0);
 -webkit-transform: scale(0.0);
@@ -79,7 +78,7 @@ transform: scale(1.0);
 		<!--固定导航-->
 		<div class="menu">
 			<div class="menu_l">
-				<h1><a href="https://ar1n.github.io/resume" title="回到首页">AREN'S RESUME</a></h1>
+<h1><a href="#page1" title="回到首页">AREN'S RESUME</a></h1>
 			</div>
 			<div class="smbtn"><i class="iconfont">&#xe62a;</i></div>
 			<ul>
@@ -198,7 +197,7 @@ transform: scale(1.0);
 		</div>
 
 		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 
 </body>

@@ -111,6 +111,6 @@ $(function () {
         slidesNavigation: true,
        
     });
-   $.fn.fullpage.setAutoScrolling(true);
+  
     
 });
