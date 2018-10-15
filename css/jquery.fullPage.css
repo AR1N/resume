@@ -160,11 +160,10 @@ html, body {
 }
 .fp-tooltip.right {
     right: 20px;
+    color: #0f0;
     display: none;
 }
-.fp-tooltip.right:hover{
-    display: block;
-}
+
 .fp-tooltip.left {
     left: 20px;
 }

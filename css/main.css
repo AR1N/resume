@@ -73,6 +73,7 @@ a {
     .skills .skill ul li {
         line-height: 1.2em;
     }
+    .qrcode{display: none;}
 }
 
 /* 大于768px */
@@ -105,24 +106,24 @@ a {
     top: 50px;
     right: 0;
     z-index: 998;
-    -moz-animation: me 5s linear infinite;
-    -webkit-animation: me 5s  linear infinite;
-    -o-animation:me 5s linear infinite;
-    animation: me 5s linear infinite;
+    -moz-animation: music 5s linear infinite;
+    -webkit-animation: music 5s linear infinite;
+    -o-animation:music 5s linear infinite;
+    animation: music 5s linear infinite;
 }
-@-moz-keyframes me{
+@-moz-keyframes music {
     from {transform: rotate(0deg); }
     to {transform: rotate(360deg); }
  }
-@-webkit-keyframes me {
+@-webkit-keyframes music {
     from { transform: rotate(0deg);  }
      to { transform: rotate(360deg);  }
 }
-@-o-keyframes me {
+@-o-keyframes music {
     from { transform: rotate(0deg);}
   to { transform: rotate(360deg); }
 }
-@keyframes me {
+@keyframes music {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
 }
@@ -134,6 +135,7 @@ a {
     -o-animation: none !important;
     animation: none!important;
 }
+
 
 /* 页面公共样式 */
 .p1,.p2,.p3,.p4 {
@@ -290,12 +292,35 @@ a {
     50% { transform: scale(1.1);}
 100% { transform: scale(1);}
 }
+.p1logo {
+    -webkit-animation: logo 1.5s .5s forwards;
+    -moz-animation: logo 1.5s .5s forwards;
+    -o-animation: logo 1.5s .5s forwards;
+    animation: logo 1.5s .5s forwards;
+}
 
+@-webkit-keyframes logo {
+    from {transform: scale(1);}
+ to {transform: scale(12);}
+}
+@-moz-keyframes logo {
+    from {transform: scale(1);}
+ to {transform: scale(12); }
+}
+@-o-keyframes logo {
+    from {transform: scale(1); }
+to {transform: scale(12); }
+}
+@keyframes logo {
+    from {transform: scale(1); }
+ to { transform: scale(12); }
+}
 .p1 .logo {
-    width: 120px;
-    height: 120px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-top: 88px;
+    margin-bottom: 66px;
     box-sizing: border-box;
 }
 
@@ -314,8 +339,13 @@ text-shadow:2px 2px 8px #fff;
     color: #fff;
     letter-spacing: 8px;
     margin-top: 28px;
+    margin-left: -180%;
+    animation: p1h3 1s 3.5s forwards ;
 }
-
+@keyframes p1h3{
+    from{margin-left: -120%;}
+    to{margin-left: 0;}
+}
 .p1 span {
     background: url("../imges/arrow.png");
     background-color: rgba(0, 0, 0, .6);
@@ -365,11 +395,13 @@ to {bottom: 40px; }
     margin: 0 16%;
     font-weight: bold;
     text-indent: 2rem;
+    width: 60%;
+    display: block;
 }
 
 .p2 p:before {
-    width: 188px;
-    height: 66px;
+    width: 150px;
+    height: 25px;
     display: block;
     content: "";
     position: absolute;
@@ -380,12 +412,11 @@ to {bottom: 40px; }
 }
 
 .p2 p::after {
-    width: 188px;
-    height: 66px;
+    width: 150px;
+    height: 25px;
     display: block;
     content: "";
     position: absolute;
-    bottom: 0;
     right: 0;
     border-right: 2px solid #0f0;
     border-bottom: 2px solid #0f0;
@@ -549,5 +580,5 @@ to {bottom: 40px; }
 .contact .r_weixin {background: url("../imges/r_weixin.jpg") no-repeat;}
 
 .contact .r_qq {background: url("../imges/r_qq.jpg") no-repeat;}
-
+.qrcode img{width: 66px;height: 66px;position: absolute;left: 0;bottom: 15px;}
 /* over */
