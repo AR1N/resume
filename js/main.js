@@ -13,7 +13,7 @@ window.onload = function () {
     me.onclick = function () {
         if (myaudio.paused) {
             myaudio.play();
-            me.style.animation = "me 5s  linear infinite";
+            me.style.animation = "music 5s  linear infinite";
         } else {
             myaudio.pause();
             me.style.animation = "none";
@@ -38,7 +38,7 @@ window.onload = function () {
         if (s.innerHTML == hello.innerHTML) {
             clearInterval(timer1);
         }
-    }, 188);
+    }, 150);
 
 }
     //文字效果2    
@@ -69,7 +69,7 @@ $(function () {
 
     setTimeout(function () {
         $("audio").attr("src", "music/The most beautiful expectation.mp3")
-    }, 2000);
+    }, 3000);
 
     //菜单按钮
     $(".smbtn i").click(function () {
@@ -89,7 +89,7 @@ setTimeout(function(){
             clearInterval(timer2);
         }
     }, 88)
-},5000);
+},5500);
    
     //联系方式 
     $(".contact i").hover(function () {
