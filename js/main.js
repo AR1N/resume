@@ -67,9 +67,9 @@ window.onload = function () {
 
 $(function () {
 
-    setTimeout(function () {
-        $("audio").attr("src", "music/The most beautiful expectation.mp3")
-    }, 3000);
+//     setTimeout(function () {
+//         $("audio").attr("src", "music/The most beautiful expectation.mp3")
+//     }, 3000);
 
     //菜单按钮
     $(".smbtn i").click(function () {
