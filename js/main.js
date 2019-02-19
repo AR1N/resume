@@ -69,7 +69,7 @@ $(function () {
 
     setTimeout(function () {
         $("audio").attr("src", "https://res.huanqing365.com/upload/audios/20181115/29ec7ab847a75659134668f6de07d61c.mp3")
-    }, 3000);
+    }, 5000);
 
     //菜单按钮
     $(".smbtn i").click(function () {
