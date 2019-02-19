@@ -11,12 +11,12 @@ window.onload = function () {
     var me = document.getElementById('me');
     var myaudio = document.getElementById('myaudio');
     me.onclick = function () {
-        if (myaudio.paused) {
+        if (myaudio.play) {
+           myaudio.paused();
+           me.style.animation = "none";
+        } else {
             myaudio.play();
             me.style.animation = "music 5s  linear infinite";
-        } else {
-            myaudio.pause();
-            me.style.animation = "none";
         }
     }
    
